@@ -15,7 +15,7 @@ export class AuthService {
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .catch(
         error => console.log(error)
-      )
+      );
   }
 
   signinUser(email: string, password: string) {
@@ -26,7 +26,7 @@ export class AuthService {
           firebase.auth().currentUser.getIdToken()
             .then(
               (token: string) => this.token = token
-            )
+            );
         }
       )
       .catch(
