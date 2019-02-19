@@ -7,11 +7,10 @@ import {
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
-import 'rxjs/add/operator/switchMap';
+import { switchMap, take } from 'rxjs/operators';
 
 import * as fromApp from '../store/app.reducer';
 import * as fromAuth from '../auth/store/auth.reducers';
-import {switchMap, take} from 'rxjs/operators';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
